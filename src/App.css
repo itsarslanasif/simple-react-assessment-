@@ -1,0 +1,106 @@
+
+.list-container, .details-container {
+  padding: 20px;
+  margin: 10px;
+  background: white;
+  border-radius: 8px;
+}
+
+.list-container {
+  width: 40%; /* Adjust width as necessary */
+  margin-right: 20px; /* Spacing between list and details */
+}
+
+.details-container {
+  flex-grow: 1; /* Details container takes up the remaining space */
+}
+
+/* List item style */
+.pokemon-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+  padding: 10px;
+  border-bottom: 1px solid #e0e0e0; /* Add bottom border */
+}
+
+.pokemon-item:last-child {
+  border-bottom: none; /* No border for the last item */
+}
+
+.pokemon-name {
+  margin-left: 10px;
+  text-transform: capitalize; /* Capitalize pokemon names */
+}
+
+/* Details view style */
+.pokemon-details {
+  text-align: left;
+}
+
+.pokemon-details img {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.detail-item {
+  margin-bottom: 10px;
+  width: 300px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0; /* Adds the line beneath each item */
+}
+
+/* You might want to exclude the line from the last item for aesthetics */
+.detail-item:last-child {
+  border-bottom: none;
+}
+
+.detail-item strong {
+  margin-right: 5px;
+  color: #333;
+}
+
+/* Header for details with same styling */
+.details-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #007bff;
+  color: white;
+  padding: 20px;
+  margin: -20px -20px 20px -20px; /* Align with the edges of the details container */
+}
+
+
+
+.app-container {
+  display: flex;
+  max-height: 100vh; /* Prevent the app container from exceeding the viewport height */
+}
+
+.list-container {
+  width: 300px; /* Adjust the width as necessary */
+  max-height: 100vh;
+  overflow-y: auto; /* Enables scrolling on the y-axis */
+  border-right: 1px solid #e0e0e0; /* Separating line between list and details */
+}
+
+.details-container {
+  flex-grow: 1; /* The details container takes up the remaining space */
+  overflow-y: auto; /* Allows for scrolling if content overflows */
+}
+
+/* Ensure the header is fixed within the list container */
+.list-container .header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Apply a similar fixed header for the details, if needed */
+.details-container .header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}

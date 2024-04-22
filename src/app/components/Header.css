@@ -1,0 +1,10 @@
+.header {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px; /* Adjust the horizontal padding */
+  text-align: center;
+  font-size: 24px;
+  margin: 0 auto; /* Centers the header if max-width is set */
+  max-width: 1200px; /* Set a max-width as per your design requirements */
+  width: 200px; /* Ensures it takes up the full width up to the max-width */
+}
